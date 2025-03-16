@@ -13,7 +13,7 @@ pipeline {
 
        stage("Build") {
             steps {
-                echo "Building the Docker image..."
+                echo "Building the Docker image...."
                 dockerBuild("notes-app","latest","gehlotnikhil38")
                 echo "Build Successful"
             }
