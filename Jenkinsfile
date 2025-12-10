@@ -30,7 +30,9 @@ pipeline {
             steps {
                 echo "Building application and nginx Docker images with caching..."
                 dockerBuild("$DOCKERHUB_USR","notes-app","latest",".")
+                echo "NOTES-APP IMAGE BUILT DONE"
                 dockerBuild("$DOCKERHUB_USR","notes-app-nginx","latest","./nginx")
+                echo "NOTES-APP-NGINX IMAGE BUILT DONE"
                 echo "Docker images built successfully!"
             }
         }
